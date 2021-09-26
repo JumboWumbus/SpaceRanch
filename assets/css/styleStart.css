@@ -1,5 +1,6 @@
 body{
   margin: 0px;
+  
 }
 
 .hero {
@@ -12,8 +13,8 @@ body{
   }
 
   .space_ranch_title{
-    width: 75%;
-    top: 100px;
+    width: 65%;
+    top: 150px;
     position: absolute;
     left: 0;
     right: 0;
@@ -86,5 +87,197 @@ body{
     to {
       transform: translateY(-2000px);
     }
+  }
+  
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 5% auto;
+  }
+  .timeline__event {
+    background: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+  .timeline__event__title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-weight: 600;
+    color: #9251ac;
+    letter-spacing: 1.5px;
+  }
+  .timeline__event__content {
+    padding: 20px;
+  }
+  .timeline__event__date {
+    color: #f6a4ec;
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .timeline__event__icon {
+    border-radius: 8px 0 0 8px;
+    background: #9251ac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 40%;
+    font-size: 2rem;
+    color: #9251ac;
+    padding: 20px;
+  }
+  .timeline__event__icon i {
+    position: absolute;
+    top: 50%;
+    left: -65px;
+    font-size: 2.5rem;
+    transform: translateY(-50%);
+  }
+  .timeline__event__description {
+    flex-basis: 60%;
+  }
+  .timeline__event:after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #9251ac;
+    position: absolute;
+    top: 52%;
+    left: -3.5rem;
+    z-index: -1;
+  }
+  .timeline__event:before {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    background: #f6a4ec;
+    border-radius: 100%;
+    left: -6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #9251ac;
+  }
+  .timeline__event--type2:before {
+    background: #87bbfe;
+    border-color: #555ac0;
+  }
+  .timeline__event--type2:after {
+    background: #555ac0;
+  }
+  .timeline__event--type2 .timeline__event__date {
+    color: #87bbfe;
+  }
+  .timeline__event--type2 .timeline__event__icon {
+    background: #555ac0;
+    color: #555ac0;
+  }
+  .timeline__event--type2 .timeline__event__title {
+    color: #555ac0;
+  }
+  .timeline__event--type3:before {
+    background: #aff1b6;
+    border-color: #24b47e;
+  }
+  .timeline__event--type3:after {
+    background: #24b47e;
+  }
+  .timeline__event--type3 .timeline__event__date {
+    color: #aff1b6;
+  }
+  .timeline__event--type3 .timeline__event__icon {
+    background: #24b47e;
+    color: #24b47e;
+  }
+  .timeline__event--type3 .timeline__event__title {
+    color: #24b47e;
+  }
+  .timeline__event:last-child:after {
+    content: none;
+  }
+  
+  @media (max-width: 786px) {
+    .timeline__event {
+      flex-direction: column;
+    }
+  
+    .timeline__event__icon {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+
+  .video-container {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    
+
+  }
+  .video-container > video {
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-top: -10%; margin-bottom: -10%;
+    
+    transform: translate(-50%, 0px);
+    z-index: 1;
+  }
+
+
+  .the-button{
+    position: relative;
+    display: inline-flex;
+    width: 250px;
+    height: 55px;
+    margin: 0 15px;
+    margin-top: 100px;
+    perspective: 1000px;
+    left: 50%;
+transform: translateX(-50%);
+    
+  }
+  .the-button a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  .the-button a:before,
+  .the-button a:after{
+    position: absolute;
+    content: "Enter";
+    height: 55px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .the-button a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .the-button a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .the-button a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
   }
   
